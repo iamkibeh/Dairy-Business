@@ -3,31 +3,51 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Dairy Business</title>
   </head>
   <body>
     <div class="container">
       <h1>Dairy business</h1>
 
-      <div class="login">
-        <span id="close"><i class="fa fa-close" style="font-size:36px"></i></span>
+      <div id="login">
         <div class="imgcontainer">
-            <img src="./assets/images/istockphoto-1314335932-612x612.jpg" alt="avatar profile picture">
+          <button id="close">
+            <i class="fa fa-close fa-lg" style="font-size: 36px" id="cls"></i>
+          </button>
+          <img
+            src="./assets/images/istockphoto-1314335932-612x612.jpg"
+            alt="avatar profile picture"
+          />
         </div>
-        <form action="#" class="frm">  
+        <form action="#" id="frm" class="frm" onsubmit="doLogin()">
           <div id="username" class="field">
             <label for="user-name"><b>Username</b></label>
-            <input type="text" name="uname" id="user-name" placeholder="Enter Username" />
+            <input
+              type="text"
+              name="uname"
+              id="user-name"
+              placeholder="Enter Username"
+              required
+            />
           </div>
           <div class="field" id="password">
             <label for="psw"><b>Password</b></label>
-            <input type="password" name="psw" id="psw" placeholder="Enter Password"/>
+            <input
+              type="password"
+              name="pwd"
+              id="pwd"
+              placeholder="Enter Password"
+              required
+            />
           </div>
 
           <div id="login-btn">
-            <button type="submit">Login</button>
+            <button type="submit" id="submit_btn" value="submit">Login</button>
 
             <label for="rmb">
               <input
@@ -35,44 +55,67 @@
                 name="remember-me"
                 id="rmb"
                 checked="checked"
-              />  Remember me
+              />
+              Remember me
             </label>
           </div>
         </form>
       </div>
-      <div class="btn">
-        <button id="getStarted">Get started</button>
-      <div class="options">
-        <select name="" id="select-month">
-          <option value="">select month</option>
-          <option value="January">January</option>
-          <option value="February">February</option>
-          <option value="March">March</option>
-          <option value="April">April </option>
-          <option value="May">May </option>
-          <option value="June">June</option>
-          <option value="July">July</option>
-          <option value="August">August </option>
-          <option value="September">September</option>
-          <option value="October">October</option>
-          <option value="November">November</option>
-          <option value="December">December</option>
 
-        </select>
+      <div id="content"></div>
+      <!-- <div class="btn">
+        <button id="getStarted">Get started</button>
+      </div> -->
+      <div id="production">
+        <h3>Production per shed</h3>
+        <p>
+          Dairy business has 4 sheds.If you would like to know the cost of
+          production per shed, click on the button below
+        </p>
+        <button
+          type="submit"
+          onclick="totalProduction(shed_perLitre)"
+          id="btn-1"
+        >
+          Click here</button
+        ><br />
       </div>
+
+      <div class="monthly-income">
+        <div class="options">
+          <select name="" id="select-month">
+            <option value="">select month</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+          </select>
+        </div>
+        <div id="income-content"></div>
+        <div class="production-per-shed" id="production-per-shed"></div>
+
+        <input type="button" value="Monthly-report" onclick="monthlyIncome(daysOfTheMonth)"/>
+        <div id="monthly-report"></div>
+      </div>
+
       <h4>INCOME OVER TIME</h4>
       <div id="income">
         <select name="" id="select-time">
           <option value="">Select time</option>
           <option value="Weekly">Weekly</option>
-          <option value="Yearly">Yearly</option>
-        </select><br>
+          <option value="Yearly">Yearly</option></select
+        ><br />
 
-        <div id="timely-income">
-        
+        <div id="timely-income"></div>
       </div>
-
-      <div class="production-per-shed"></div>
     </div>
   </body>
 

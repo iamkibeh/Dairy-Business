@@ -11,6 +11,36 @@ const submit_btn = document.getElementById("submit_btn")
 const production_content=document.getElementById("production-per-shed");
 const months=document.getElementById("select-month");
 
+const daysOfTheMonth={
+  January:31,
+  February:29,
+  March:31,
+  April:30,
+  May:31,
+  June:30,
+  July:31,
+  August:31,
+  September:30,
+  October:31,
+  November:30,
+  December:31
+}
+let objectCopy = Object.assign({}, daysOfTheMonth);
+
+
+function monthlyIncome(obj){
+  // let arr = new Array()
+  let monthArr = Object.keys(obj);
+  let daysArr = Object.values(obj);
+  for(let i=0;i<daysArr.length;i++){
+      let amount = daysArr[i]*45*1876;
+      
+      let cost="Your income for "+monthArr[i]+" is "+amount
+      // console.log("Your income for "+monthArr[i]+" is "+amount)
+      monthly_report.innerHTML += "Your income for "+monthArr[i]+" is "+amount + "<br>"
+      
+  }
+
 months.addEventListener('change', function() {
   console.log('You selected: ', this.value);
   let monthly_cost=daysOfTheMonth[this.value]*45*1876;

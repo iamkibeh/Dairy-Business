@@ -62,7 +62,7 @@
         </form>
       </div>
 
-      <div id="content"></div>
+      <div id="content" ></div>
       <!-- <div class="btn">
         <button id="getStarted">Get started</button>
       </div> -->
@@ -72,6 +72,9 @@
           Dairy business has 4 sheds.If you would like to know the cost of
           production per shed, click on the button below
         </p>
+        <div id="display_div">
+
+        </div>
         <button
           type="submit"
           onclick="totalProduction(shed_perLitre)"
@@ -79,6 +82,7 @@
         >
           Click here</button
         ><br />
+        
       </div>
 
       <div class="monthly-income">
@@ -113,7 +117,7 @@
           <option value="Weekly">Weekly</option>
           <option value="Yearly">Yearly</option></select
         ><br />
-<input type="button" value="Timely-Income" onclick="overTimeIncome(buying_rate, period)">
+<input type="button" value="Timely-Income" id="btn3" onclick="overTimeIncome(buying_rate, period)">
         <div id="timely-income"></div>
       </div>
     </div>

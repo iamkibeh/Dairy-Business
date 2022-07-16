@@ -32,8 +32,24 @@ let shedArr = Object.keys(obj);
 let litreArr = Object.values(obj);
 
 for(let i=0; i<shedArr.length; i++){
-  console.log(`Your production in Shed  ${shedArr[i]} ${litreArr[i]} litres per day`)
+const buying_rate=45;
+let cost;
+function incomeOverTime(selling_price,time){
+    if(time==="Weekly"){
+ cost=selling_price*7
+        
+    }
+    else if(time==="Yearly"){
+ cost=selling_price*365
+
 }
+    return timely_income.innerHTML += `Your ${time} income will be Ksh ${cost} <br>`;
 }
+// let amountBalance=incomeOverTime(buying_rate,"weekly")
+// console.log(amountBalance);
+
+select_time.addEventListener('change',function(){
+  incomeOverTime(buying_rate, this.value)
+})
 
 console.log(totalProduction(shed_perLitre))

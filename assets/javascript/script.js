@@ -121,3 +121,20 @@ select_time.addEventListener('change',function(){
   incomeOverTime(buying_rate, this.value)
 })
 
+
+let period = ["weekly","yearly"]
+function overTimeIncome(selling_price,time){
+  for(let i=0; i<time.length;i++){
+    if(time[i]==="weekly"){
+      cost=selling_price*7*1876
+             
+         }
+         else if(time[i]==="yearly"){
+      cost=selling_price*365*1876
+     
+         }
+ timely_income.innerHTML += `Your ${time[i]} income will be Ksh ${cost} <br>`
+
+  }
+ 
+}

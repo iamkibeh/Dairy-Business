@@ -17,3 +17,23 @@ months.addEventListener('change', function() {
   console.log(monthly_cost)
   production_content.innerHTML += "Your income for "+this.value+" is "+monthly_cost +"<br>"
 });
+
+// TOTAL PRODUCTION PER SHED
+
+let shed_perLitre = {
+  "A":510,
+  "B":308,
+  "C":486,
+  "D":572
+};
+
+function totalProduction (obj) {
+let shedArr = Object.keys(obj);
+let litreArr = Object.values(obj);
+
+for(let i=0; i<shedArr.length; i++){
+  console.log(`Your production in Shed  ${shedArr[i]} ${litreArr[i]} litres per day`)
+}
+}
+
+console.log(totalProduction(shed_perLitre))

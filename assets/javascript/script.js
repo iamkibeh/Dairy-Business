@@ -87,13 +87,27 @@ let shed_perLitre = {
   "D":572
 };
 
-function totalProduction (obj) {
+function totalProduction(obj) {
 let shedArr = Object.keys(obj);
 let litreArr = Object.values(obj);
+  console.log(shedArr.length);
+  console.log(display_div.children);
+  console.log("child_nodes:" + display_div.childNodes.length);
 
-for(let i=0; i<shedArr.length; i++){
+  if (display_div.childNodes.length < shedArr.length) {
+    console.log(display_div.childNodes);
+    console.log("clearing");
+    display_div.childNodes.forEach(child => {
+      console.log("removing child: " + child);
+
+  })
+  for (let i = 0; i < shedArr.length; i++) {
   // console.log(`Your production in Shed  ${shedArr[i]} ${litreArr[i]} litres per day`)
-  production.innerHTML += `<b>Your production in Shed  ${shedArr[i]} ${litreArr[i]} litres per day <br><b>`
+
+    // console.log(display_div.innerHTML=shedArr[i]);
+    production.appendChild(display_div);
+    display_div.innerHTML += `<b><p>Your production in Shed  ${shedArr[i]} ${litreArr[i]} litres per day </p><br><b>`;
+  }
 }
 }
 

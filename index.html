@@ -77,29 +77,35 @@
       <div class="logo">
         <div id="content"></div>
         <div class="image">
-          <img src="./assets/images/cattlelogo.jpg" alt="">
+          <img src="./assets/images/cattlelogo.jpg" alt="" />
         </div>
       </div>
 
-     
       <!-- <div class="btn">
         <button id="getStarted">Get started</button>
       </div> -->
       <div id="production">
-        <h3>Production per shed</h3>
-        <p>
-          Dairy business has 4 sheds.If you would like to know the cost of
-          production per shed, click on the button below
-        </p>
+        <div class="per-shed">
+          <h3>Production per shed</h3>
+          <p>
+            Dairy business has 4 sheds.If you would like to know the cost of
+            production per shed, click on the button below
+          </p>
+
+          <div class="click">
+            <button
+              type="submit"
+              onclick="totalProduction(shed_perLitre)"
+              id="btn-1"
+            >
+              Click here</button
+            ><br />
+          </div>
+        </div>
+
         <div id="display_div"></div>
-        <button
-          type="submit"
-          onclick="totalProduction(shed_perLitre)"
-          id="btn-1"
-        >
-          Click here</button
-        ><br />
       </div>
+      <div class="production-per-shed" id="production-per-shed"></div>
 
       <div class="monthly-income">
         <div class="options">
@@ -120,13 +126,14 @@
           </select>
         </div>
         <div id="income-content"></div>
-        <div class="production-per-shed" id="production-per-shed"></div>
+        <div class="months">
+          <input
+            type="button"
+            value="Monthly-report"
+            onclick="monthlyIncome(daysOfTheMonth)"
+          />
+        </div>
 
-        <input
-          type="button"
-          value="Monthly-report"
-          onclick="monthlyIncome(daysOfTheMonth)"
-        />
         <div id="monthly-report"></div>
       </div>
 

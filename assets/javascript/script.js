@@ -5,16 +5,16 @@ const close = document.getElementById("close");
 const content = document.getElementById("content");
 const username = document.getElementById("user-name").value;
 const password = document.getElementById("pwd").value;
-const submit_btn = document.getElementById("submit_btn");
+const submitBtn = document.getElementById("submit_btn");
 const production_content = document.getElementById("production-per-shed");
 const months = document.getElementById("select-month");
 const production = document.getElementById("production");
-const display_div = document.getElementById("display_div");
-const btn_1 = document.getElementById("btn-1");
-const select_time = document.getElementById("select-time");
-const timely_income = document.getElementById("timely-income");
-const income_content = document.getElementById("income-content");
-const monthly_report = document.getElementById("monthly-report");
+const displayDiv = document.getElementById("display_div");
+const btn1 = document.getElementById("btn-1");
+const selectTime = document.getElementById("select-time");
+const timelyIncome = document.getElementById("timely-income");
+const incomeContent = document.getElementById("income-content");
+const monthlyReport = document.getElementById("monthly-report");
 const btn3 = document.getElementById("btn3");
 const timelyReport = document.getElementById("timely-report")
 
@@ -66,11 +66,11 @@ function monthlyIncome(obj) {
 
     let cost = "Your income for " + monthArr[i] + " is " + amount;
     // console.log("Your income for "+monthArr[i]+" is "+amount)
-    // console.log(monthly_report.childNodes.length)
-    console.log(monthly_report.children.length);
-    if(monthly_report.children.length < daysArr.length){
+    // console.log(monthlyReport.childNodes.length)
+    console.log(monthlyReport.children.length);
+    if(monthlyReport.children.length < daysArr.length){
       
-    monthly_report.innerHTML +=
+    monthlyReport.innerHTML +=
       "Your income for " + monthArr[i] + " is " + amount + "<br>";
   }
 }
@@ -92,7 +92,7 @@ months.addEventListener("change", function () {
   console.log("You selected: ", this.value);
   let monthly_cost = daysOfTheMonth[this.value] * 45 * 1876;
   console.log(monthly_cost);
-  income_content.innerHTML +=
+  incomeContent.innerHTML +=
     "Your income for " + this.value + " is " + monthly_cost + "<br>";
 });
 
@@ -109,22 +109,22 @@ function totalProduction(obj) {
   let shedArr = Object.keys(obj);
   let litreArr = Object.values(obj);
   console.log(shedArr.length);
-  console.log(display_div.children);
-  console.log("child_nodes:" + display_div.childNodes.length);
+  console.log(displayDiv.children);
+  console.log("child_nodes:" + displayDiv.childNodes.length);
 
-  if (display_div.childNodes.length < shedArr.length) {
-    console.log(display_div.childNodes);
+  if (displayDiv.childNodes.length < shedArr.length) {
+    console.log(displayDiv.childNodes);
     console.log("clearing");
-    display_div.childNodes.forEach(child => {
+    displayDiv.childNodes.forEach(child => {
       console.log("removing child: " + child);
   
   })
   for (let i = 0; i < shedArr.length; i++) {
     // console.log(`Your production in Shed  ${shedArr[i]} ${litreArr[i]} litres per day`)
 
-    // console.log(display_div.innerHTML=shedArr[i]);
-    // production.appendChild(display_div);
-    display_div.innerHTML += `<b><p>Your production in Shed  ${shedArr[i]} ${litreArr[i]} litres per day </p><br><b>`;
+    // console.log(displayDiv.innerHTML=shedArr[i]);
+    // production.appendChild(displayDiv);
+    displayDiv.innerHTML += `<b><p>Your production in Shed  ${shedArr[i]} ${litreArr[i]} litres per day </p><br><b>`;
   }
 }
 }
@@ -141,19 +141,19 @@ function incomeOverTime(selling_price, time) {
   } else if (time === "Yearly") {
     cost = selling_price * 365;
   }
-  return (timely_income.innerHTML += `Your ${time} income will be Ksh ${cost} <br>`);
+  return (timelyIncome.innerHTML += `Your ${time} income will be Ksh ${cost} <br>`);
 }
 // let amountBalance=incomeOverTime(buying_rate,"weekly")
 // console.log(amountBalance);
 
-select_time.addEventListener("change", function () {
+selectTime.addEventListener("change", function () {
   incomeOverTime(buying_rate, this.value);
 });
 
 let period = ["weekly", "yearly"];
 
 function overTimeIncome(selling_price, time) {
-// console.log(timely_income.children.length)
+// console.log(timelyIncome.children.length)
 if(timelyReport.children.length < time.length){
 
   for (let i = 0; i < time.length; i++) {

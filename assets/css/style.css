@@ -55,7 +55,7 @@
 }
 .frm .field input{
     padding: 5px;
-    width: 90%;
+    /* width: 90%; */
 }
 .frm .field label{
     margin-bottom: 2px;
@@ -66,6 +66,7 @@
 #login-btn button{
     background-color: green;
     border: none;
+    /* width: 90%; */
     padding: 10px;
     margin-bottom: 5px;
     cursor: pointer;
@@ -198,8 +199,10 @@ background: rgba(255, 255, 255, 0.5) ;
 }
 
 .report-head{
-    /* background-color: #e04f0c; */
+    background-color: rgba(255, 255, 255, 0.4);
     padding: 5px;
+    width: fit-content;
+    margin: auto;
     text-align: center;
     text-decoration: underline 2px;
     color: black;

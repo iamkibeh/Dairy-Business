@@ -149,3 +149,28 @@ font-size:18px ;
     width: 40%;
     border-radius: 50%;
 }
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px #a8a8b4 ;
+}
+#production .per-shed h3{
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+#production .per-shed .click{
+    text-align: center;
+    margin-top: 8px;
+}
+#production .per-shed #btn-1{
+/* background-color: red; */
+width: 9em;
+height: 3em;
+border: none;
+border-radius: 8px;
+/* position: relative; */
+}
+#production  #display_div{
+    flex: 1;
+    padding: 10px;
+
+}

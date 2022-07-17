@@ -139,18 +139,24 @@
 
       <h4>INCOME OVER TIME</h4>
       <div id="income">
-        <select name="" id="select-time">
-          <option value="">Select time</option>
-          <option value="Weekly">Weekly</option>
-          <option value="Yearly">Yearly</option></select
-        ><br />
-        <input
-          type="button"
-          value="Timely-Income"
-          id="btn3"
-          onclick="overTimeIncome(buying_rate, period)"
-        />
+        <div class="options">
+          <select name="" id="select-time">
+            <option value="">Select time</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Yearly">Yearly</option></select
+          ><br />
+        </div>
         <div id="timely-income"></div>
+        <div class="months">
+          <input
+            type="button"
+            value="Timely-Income"
+            id="btn3"
+            onclick="overTimeIncome(buying_rate, period)"
+          />
+        </div>
+
+        <div id="timely-report"></div>
       </div>
     </div>
   </body>

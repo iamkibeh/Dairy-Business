@@ -16,6 +16,9 @@ const timely_income = document.getElementById("timely-income");
 const income_content = document.getElementById("income-content");
 const monthly_report = document.getElementById("monthly-report");
 const btn3 = document.getElementById("btn3");
+const timelyReport = document.getElementById("timely-report")
+
+
 
 frm.onsubmit = function(e){
   e.preventDefault();
@@ -150,8 +153,8 @@ select_time.addEventListener("change", function () {
 let period = ["weekly", "yearly"];
 
 function overTimeIncome(selling_price, time) {
-console.log(timely_income.children.length)
-if(timely_income.children.length < time.length){
+// console.log(timely_income.children.length)
+if(timelyReport.children.length < time.length){
 
   for (let i = 0; i < time.length; i++) {
     if (time[i] === "weekly") {
@@ -159,7 +162,7 @@ if(timely_income.children.length < time.length){
     } else if (time[i] === "yearly") {
       cost = selling_price * 365 * 1876;
     }
-    timely_income.innerHTML += `Your ${time[i]} income will be Ksh ${cost} <br>`;
+    timelyReport.innerHTML += `Your ${time[i]} income will be Ksh ${cost} <br>`;
   }
 }
 }

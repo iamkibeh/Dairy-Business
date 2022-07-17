@@ -187,7 +187,7 @@ cursor: pointer;
 
 }
 
-#production #display_div,#income-content{
+#production #display_div,#income-content,#timely-income{
     /* background-color: #a8a8b4; */
     margin-left: 20px;
     border-radius: 8px;
@@ -198,7 +198,7 @@ cursor: pointer;
 
 /* styling monthly income section */
 
-.monthly-income{
+.monthly-income,#income{
     /* background-color: #e04f0c; */
     padding: 20px;
 display: grid;
@@ -207,14 +207,14 @@ grid-gap: 1em;
 }
 
 
-.monthly-income .options{
+ .options{
     background-color: #a8a8b4;
     padding: 10px;
     border-radius: 8px;
     box-shadow: 1px 1px 3px #a8a8b4 ;
  
 }
-.monthly-income .options select{
+.monthly-income .options select,#income .options select{
     /* background-color: red; */
     height: 2em;
     border-radius: 5px;
@@ -222,7 +222,7 @@ grid-gap: 1em;
    
 }
  
-.monthly-income .months{
+ .months{
     background-color: #a8a8b4;
     padding: 10px;
     border-radius: 8px;
@@ -232,16 +232,17 @@ grid-gap: 1em;
     /* justify-content: center; */
     align-items: center;
 }
-.monthly-income .months input{ 
+.monthly-income .months input, #income .months input{ 
     width: 9em;
     height: 3em;
     border: none;
     border-radius: 8px;
     cursor: pointer;
 }
-.monthly-income #monthly-report{
+ #monthly-report,#timely-report{
     margin-left: 20px;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 1px 1px 3px #a8a8b4;
 }
+

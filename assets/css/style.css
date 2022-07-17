@@ -5,7 +5,9 @@
 }
 
 #login{
-   background-color: rgb(201, 201, 201);
+   /* background-color: rgb(201, 201, 201); */
+   box-shadow: 3px 3px 4px rgba(255, 255, 255, 10);
+   border-radius: 8px;
    width: 50%;
    margin: auto;
    padding: 20px;
@@ -24,10 +26,8 @@
 #close{
     float:right;
     border: none;
-    /* top: 0; */
     text-align: end;
-    /* background-color: orange; */
-    width: 10%;
+    border: none;
     margin-bottom: -50px;
 
 }
@@ -55,6 +55,7 @@
 }
 .frm .field input{
     padding: 5px;
+    width: 90%;
 }
 .frm .field label{
     margin-bottom: 2px;
@@ -253,16 +254,16 @@ grid-gap: 1em;
     background-color: black;
 }
 .footer{
-    margin:auto ;
     display: flex;
     color: #fafafa;
     padding: 20px;
-    width: 80%;
+    width: 90%;
+    margin:auto ;
 }
 
 .footer .about,.social-media,.resources{
     flex:1;
-    margin: 2em;
+    margin:1em;
 }
 .about section,.social-media section,.resources section{
     /* background-color: #e04f0c; */
@@ -306,4 +307,32 @@ display: flex;
  section ul li a:hover{
     color: #282b7d;
     transform: scale(1.2);
+}
+
+/* media queries */
+
+@media only screen and (max-width:680px){
+    .footer{
+        display: grid;
+        margin:auto ;
+    }
+}
+
+@media only screen and (max-width:570px){
+    #production{ 
+        /* margin: 30px auto; */
+        display: grid;
+        /* background-color: red; */
+        } 
+        .monthly-income,#income{
+            display: flex;
+            flex-direction: column;
+        }
+        #nav ul{
+            display: grid;
+               
+        }
+        #nav ul li {
+           margin-bottom:2em;
+        }
 }

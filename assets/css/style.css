@@ -164,7 +164,7 @@ display: flex;
     border-radius: 8px;
     box-shadow: 1px 1px 3px #a8a8b4 ;
 }
-#production .per-shed h3{
+#production .per-shed h3,.months h3{
     margin-bottom: 10px;
     font-style: italic;
 }
@@ -197,6 +197,13 @@ background: rgba(255, 255, 255, 0.5) ;
     box-shadow: 1px 1px 3px #a8a8b4;
 }
 
+.report-head{
+    /* background-color: #e04f0c; */
+    padding: 5px;
+    text-align: center;
+    text-decoration: underline 2px;
+    color: black;
+}
 
 /* styling monthly income section */
 
@@ -231,8 +238,12 @@ grid-gap: 1em;
     box-shadow: 1px 1px 3px #a8a8b4 ;
 
     display: flex;
-    /* justify-content: center; */
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+}
+.months input{
+margin: 2em;
 }
 .monthly-income .months input, #income .months input{ 
     width: 9em;

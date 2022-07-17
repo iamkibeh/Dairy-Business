@@ -22,10 +22,11 @@ frm.onsubmit = function(e){
   const username = document.getElementById("user-name").value;
   login.style.display = "none";
 
-  var tag = document.createElement("p");
-  var text = document.createTextNode(username); 
+  var tag = document.createElement("h2");
+  var text = document.createTextNode(`Hello ${username} welcome`); 
   tag.appendChild(text);
   content.appendChild(tag);
+
   console.log("username: " + username);
 };
 
@@ -51,8 +52,8 @@ const daysOfTheMonth = {
   November: 30,
   December: 31,
 };
-let objectCopy = Object.assign({}, daysOfTheMonth);
-
+// let objectCopy = Object.assign({}, daysOfTheMonth);
+// console.log(objectCopy);
 function monthlyIncome(obj) {
   // let arr = new Array()
   let monthArr = Object.keys(obj);

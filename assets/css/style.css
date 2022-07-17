@@ -149,6 +149,17 @@ font-size:18px ;
     width: 40%;
     border-radius: 50%;
 }
+
+
+#production{
+margin: 30px auto;
+display: flex;
+}
+
+#production .per-shed{
+    flex: 1;
+    background-color: #a8a8b4;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 1px 1px 3px #a8a8b4 ;
 }

@@ -111,3 +111,41 @@
 color: blue;
 font-size:18px ;
 }
+
+.container{
+    width: 80%;
+     margin: auto;
+    /*background-image: url(../images/cattlegrazing.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* color: #fafafa; */
+}
+
+#title{
+    text-align: center;
+    color: rgb(5, 148, 231);
+    padding: 10px;
+}
+
+#content{
+    /* background-color: gray; */
+    font-style: italic;
+    margin: 20px 0;
+    padding: 5px;
+
+}
+
+.logo{
+    display: flex;
+}
+.logo #content{
+    flex: 1;
+    align-items: center;
+}
+.logo .image{
+    flex: 3;
+}
+.logo img{
+    width: 40%;
+    border-radius: 50%;
+}

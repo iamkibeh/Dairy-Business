@@ -249,5 +249,61 @@ grid-gap: 1em;
     box-shadow: 1px 1px 3px #a8a8b4;
 }
 
+.main-footer{
+    background-color: black;
+}
+.footer{
+    margin:auto ;
+    display: flex;
+    color: #fafafa;
+    padding: 20px;
+    width: 80%;
+}
 
+.footer .about,.social-media,.resources{
+    flex:1;
+    margin: 2em;
+}
+.about section,.social-media section,.resources section{
+    /* background-color: #e04f0c; */
+    margin: 1em;
+    padding: 5px;
+}
+.about section form {
+    display: flex;
+    width: 80%;
+}
+.about section form #email{
+    width: 12em;
+    height: 2em;
+}
+.about section form #submit{
+    height: 2em;
+    background-color: #282b7d;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+#submit:hover{
+    opacity: 0.9;
+}
 
+.social-media section ul li,.resources li{
+padding: 5px;
+margin: 2px;
+list-style: none;
+display: flex;
+}
+.social-media section ul li a{
+    margin-left: 1em;
+    text-decoration: none;
+    color: #fafafa;
+}
+.resources section ul li a{
+    text-decoration: none;
+    color: #fafafa;
+}
+ section ul li a:hover{
+    color: #282b7d;
+    transform: scale(1.2);
+}

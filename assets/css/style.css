@@ -115,10 +115,10 @@ font-size:18px ;
 .container{
     width: 80%;
      margin: auto;
-    /*background-image: url(../images/cattlegrazing.jpg);
+    background-image: url(../images/dairycattle.jpg);
     background-repeat: no-repeat;
-    background-size: cover; */
-    /* color: #fafafa; */
+    background-size: cover; 
+    color: #fafafa;
 }
 
 #title{
@@ -184,11 +184,12 @@ cursor: pointer;
 #production  #display_div{
     flex: 1;
     padding: 10px;
-
+background: rgba(255, 255, 255, 0.5) ;
 }
 
 #production #display_div,#income-content,#timely-income{
-    /* background-color: #a8a8b4; */
+    background: rgba(255, 255, 255, 0.5) ;
+    font-weight: 900;
     margin-left: 20px;
     border-radius: 8px;
     padding: 20px;
@@ -240,9 +241,13 @@ grid-gap: 1em;
     cursor: pointer;
 }
  #monthly-report,#timely-report{
+    background: rgba(255, 255, 255, 0.5) ;
+    font-weight: 900;
     margin-left: 20px;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 1px 1px 3px #a8a8b4;
 }
+
+
 
